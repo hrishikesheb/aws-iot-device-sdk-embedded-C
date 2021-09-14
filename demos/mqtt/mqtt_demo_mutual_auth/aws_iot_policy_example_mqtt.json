@@ -1,25 +1,26 @@
+
 {
   "Version": "2012-10-17",
   "Statement": [
     {
       "Effect": "Allow",
       "Action": "iot:Connect",
-      "Resource": "arn:aws:iot:[AWS_REGION]:[AWS_ACCOUNT_ID]:client/${iot:Connection.Thing.ThingName}"
+      "Resource": "arn:aws:iot:us-west-2:244045773084:client/${iot:Connection.Thing.ThingName}"
     },
     {
       "Effect": "Allow",
       "Action": "iot:Subscribe",
-      "Resource": "arn:aws:iot:[AWS_REGION]:[AWS_ACCOUNT_ID]:topicfilter/${iot:Connection.Thing.ThingName}/example/topic"
+      "Resource": "arn:aws:iot:us-west-2:244045773084:topicfilter/${iot:Connection.Thing.ThingName}/example/topic"
     },
     {
       "Effect": "Allow",
       "Action": "iot:Receive",
-      "Resource": "arn:aws:iot:[AWS_REGION]:[AWS_ACCOUNT_ID]:topic/${iot:Connection.Thing.ThingName}/example/topic"
+      "Resource": "arn:aws:iot:us-west-2:244045773084:topic/${iot:Connection.Thing.ThingName}/example/topic"
     },
     {
       "Effect": "Allow",
       "Action": "iot:Publish",
-      "Resource": "arn:aws:iot:[AWS_REGION]:[AWS_ACCOUNT_ID]:topic/${iot:Connection.Thing.ThingName}/example/topic"
+      "Resource": "arn:aws:iot:us-west-2:244045773084:topic/${iot:Connection.Thing.ThingName}/example/topic"
     }
   ]
 }
