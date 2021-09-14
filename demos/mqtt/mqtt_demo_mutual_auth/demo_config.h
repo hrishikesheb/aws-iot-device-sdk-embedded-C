@@ -55,8 +55,8 @@
  * @note Your AWS IoT Core endpoint can be found in the AWS IoT console under
  * Settings/Custom Endpoint, or using the describe-endpoint API.
  *
- * #define AWS_IOT_ENDPOINT               "...insert here..."
- */
+ */ #define AWS_IOT_ENDPOINT               "a102r35uo07t2v-ats.iot.us-west-2.amazonaws.com"
+ 
 
 /**
  * @brief AWS IoT MQTT broker port number.
@@ -86,7 +86,7 @@
  * ROOT_CA_CERT_PATH to the absolute path if this demo is executed from elsewhere.
  */
 #ifndef ROOT_CA_CERT_PATH
-    #define ROOT_CA_CERT_PATH    "certificates/AmazonRootCA1.crt"
+#define ROOT_CA_CERT_PATH    "certificates/AmazonRootCA1.pem"
 #endif
 
 /**
@@ -97,9 +97,8 @@
  * https://docs.aws.amazon.com/iot/latest/developerguide/client-authentication.html
  *
  * @note This certificate should be PEM-encoded.
- *
- * #define CLIENT_CERT_PATH    "...insert here..."
- */
+ */ #define CLIENT_CERT_PATH    "certificates/baef2e8133a04d2e91f81b4ee0c94ab4cb6b553b248ceb1418ed5f0c3730cace-certificate.pem.crt"
+
 
 /**
  * @brief Path of the file containing the client's private key.
@@ -110,8 +109,9 @@
  *
  * @note This private key should be PEM-encoded.
  *
- * #define CLIENT_PRIVATE_KEY_PATH    "...insert here..."
- */
+ */ 
+#define CLIENT_PRIVATE_KEY_PATH    "certificates/baef2e8133a04d2e91f81b4ee0c94ab4cb6b553b248ceb1418ed5f0c3730cace-private.pem.key"
+ 
 
 /**
  * @brief The username value for authenticating client to MQTT broker when
@@ -128,7 +128,7 @@
  * the username and password will be used instead of the client certificate and
  * private key for client authentication.
  *
- * #define CLIENT_USERNAME    "...insert here..."
+ #define CLIENT_USERNAME    "...PLease enter..."
  */
 
 /**
@@ -144,8 +144,8 @@
  * @note AWS IoT message broker requires either a set of client certificate/private key
  * or username/password to authenticate the client.
  *
- * #define CLIENT_PASSWORD    "...insert here..."
- */
+  #define CLIENT_PASSWORD    "...PLease enter..."
+*/
 
 /**
  * @brief MQTT client identifier.
@@ -153,7 +153,7 @@
  * No two clients may use the same client identifier simultaneously.
  */
 #ifndef CLIENT_IDENTIFIER
-    #define CLIENT_IDENTIFIER    "testclient"
+    #define CLIENT_IDENTIFIER    "test_thing"
 #endif
 
 /**
